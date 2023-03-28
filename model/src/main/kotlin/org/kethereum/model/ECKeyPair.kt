@@ -17,4 +17,9 @@ inline class PublicKey(val key: BigInteger) {
     override fun toString() = key.toString()
 }
 
-data class ECKeyPair(val privateKey: PrivateKey, val publicKey: PublicKey)
+data class ECKeyPair(val privateKey: PrivateKey, val publicKey: PublicKey) {
+    @JvmName("getPrivateKey-V6oYYD4")
+    fun getPrivateKey(): BigInteger {
+        return privateKey.key
+    }
+}
